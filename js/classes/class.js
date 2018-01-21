@@ -1,21 +1,21 @@
 
 class ClassObject{
   constructor(){
-    var header = new fabric.Rect({
+     this.header = new fabric.Rect({
     left: 100,
     top: 100,
     fill: 'red',
     width: 100,
     height: 50
     });
-    var body= new fabric.Rect({
+    this.body= new fabric.Rect({
       left: 100,
       top: 150,
-      fill: 'red',
+      fill: 'black',
       width: 100,
       height: 30
     });
-    var metods = new fabric.Rect({
+     this.metods = new fabric.Rect({
     left: 100,
     top: 180,
     fill: 'red',
@@ -25,9 +25,10 @@ class ClassObject{
 
   }
 draw(canvas){
-  var group = new fabric.Group([this.header, this.body, this.metods]);
-  canvas.add(group);
+   this.group = new fabric.Group([this.header, this.body, this.metods]);
+  canvas.add(this.group);
   }
 
 
 }
+var first=new ClassObject();
